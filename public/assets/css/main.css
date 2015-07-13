@@ -1,4 +1,9 @@
 @charset "UTF-8";
+/*
+ * Variables used throughout Cannonfire
+ * organized by categories and
+ * listed alphabetically
+ */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -196,6 +201,18 @@ strong, b {
 
 i {
   font-style: italic; }
+
+.lh-1x {
+  line-height: 0.75em; }
+
+.lh-2x {
+  line-height: 1.5em; }
+
+.lh-3x {
+  line-height: 2.25em; }
+
+.lh-4x {
+  line-height: 3em; }
 
 select,
 textarea,
@@ -395,49 +412,37 @@ label {
 
 .alert {
   width: 100%;
+  padding: 0 0 0 16px;
   border-radius: 3px;
-  padding: 24px 12px;
+  height: 52px;
+  line-height: 50px;
   font-size: 15px; }
   .alert.primary {
-    color: #26816a;
-    border: 1px solid #48CFAD;
-    border-left-width: 5px; }
-    .alert.primary a {
-      color: #26816a;
-      font-weight: bold;
-      text-decoration: none; }
+    background: #48CFAD;
+    color: #FFFFFF;
+    border-left: 52px solid #37BC9B; }
   .alert.secondary {
-    color: #7f8b9c;
-    border: 1px solid #CCD1D9;
-    border-left-width: 5px; }
-    .alert.secondary a {
-      color: #7f8b9c;
-      font-weight: bold;
-      text-decoration: none; }
+    background: #CCD1D9;
+    color: #FFFFFF;
+    border-left: 52px solid #AAB2BD; }
   .alert.error {
-    color: #af2331;
-    border: 1px solid #ED5565;
-    border-left-width: 5px; }
-    .alert.error a {
-      color: #af2331;
-      font-weight: bold;
-      text-decoration: none; }
+    background: #ED5565;
+    color: #FFFFFF;
+    border-left: 52px solid #DA4453; }
   .alert.watch {
-    color: #ee9c04;
-    border: 1px solid #FFCE54;
-    border-left-width: 5px; }
-    .alert.watch a {
-      color: #ee9c04;
-      font-weight: bold;
-      text-decoration: none; }
+    background: #FFCE54;
+    color: #FFFFFF;
+    border-left: 52px solid #FCBB42; }
   .alert.success {
-    color: #659234;
-    border: 1px solid #A0D468;
-    border-left-width: 5px; }
-    .alert.success a {
-      color: #659234;
-      font-weight: bold;
-      text-decoration: none; }
+    background: #A0D468;
+    color: #FFFFFF;
+    border-left: 52px solid #8CC152; }
+  .alert a {
+    text-decoration: underline; }
+  .alert .fa {
+    position: absolute;
+    font-size: 1.5em;
+    margin: 15px 0 0 -50px; }
 
 table {
   width: 100%; }
@@ -498,6 +503,132 @@ img.background {
       display: inline-block;
       line-height: 2.15em; }
 
+.mar-t-s {
+  margin-top: 4px; }
+
+.mar-t-n {
+  margin-top: 8px; }
+
+.mar-t-l {
+  margin-top: 16px; }
+
+.mar-t-h {
+  margin-top: 32px; }
+
+.mar-b-s {
+  margin-bottom: 4px; }
+
+.mar-b-n {
+  margin-bottom: 8px; }
+
+.mar-b-l {
+  margin-bottom: 16px; }
+
+.mar-b-h {
+  margin-bottom: 32px; }
+
+.mar-l-s {
+  margin-left: 4px; }
+
+.mar-l-n {
+  margin-left: 8px; }
+
+.mar-l-l {
+  margin-left: 16px; }
+
+.mar-l-h {
+  margin-left: 32px; }
+
+.mar-r-s {
+  margin-right: 4px; }
+
+.mar-r-n {
+  margin-right: 8px; }
+
+.mar-r-l {
+  margin-right: 16px; }
+
+.mar-r-h {
+  margin-right: 32px; }
+
+.pad-t-s {
+  padding-top: 4px; }
+
+.pad-t-n {
+  padding-top: 8px; }
+
+.pad-t-l {
+  padding-top: 16px; }
+
+.pad-t-h {
+  padding-top: 32px; }
+
+.pad-b-s {
+  padding-bottom: 4px; }
+
+.pad-b-n {
+  padding-bottom: 8px; }
+
+.pad-b-l {
+  padding-bottom: 16px; }
+
+.pad-b-h {
+  padding-bottom: 32px; }
+
+.pad-l-s {
+  padding-left: 4px; }
+
+.pad-l-n {
+  padding-left: 8px; }
+
+.pad-l-l {
+  padding-left: 16px; }
+
+.pad-l-h {
+  padding-left: 32px; }
+
+.pad-r-s {
+  padding-right: 4px; }
+
+.pad-r-n {
+  padding-right: 8px; }
+
+.pad-r-l {
+  padding-right: 16px; }
+
+.pad-r-h {
+  padding-right: 32px; }
+
+.hidden {
+  display: none; }
+
+.invisible {
+  visibility: hidden; }
+
+.float-l {
+  float: left; }
+
+.float-r {
+  float: right; }
+
+.t-shad {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25); }
+
+.fw-b {
+  font-weight: bold; }
+
+.fw-n {
+  font-weight: normal; }
+
+.fw-m {
+  font-weight: 500; }
+
+.fw-l {
+  font-weight: 300; }
+
+.fw-t {
+  font-weight: 100; }
+
 /*!
  *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -506,8 +637,8 @@ img.background {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("/assets/fonts/fontawesome-webfont.eot?v=4.2.0");
-  src: url("/assets/fonts/fontawesome-webfont.eot?#iefix&v=4.2.0") format("embedded-opentype"), url("/assets/fonts/fontawesome-webfont.woff?v=4.2.0") format("woff"), url("/assets/fonts/fontawesome-webfont.ttf?v=4.2.0") format("truetype"), url("/assets/fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular") format("svg");
+  src: url("../fonts/fontawesome-webfont.eot?v=4.2.0");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.2.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff?v=4.2.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.2.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 

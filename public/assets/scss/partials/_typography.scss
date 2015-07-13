@@ -23,3 +23,9 @@ strong, b {
 i {
   font-style: italic;
 }
+
+@each $i in 1, 2, 3, 4 {
+    .lh-#{$i}x {
+        line-height: $default-line-height * $i;
+    }
+}

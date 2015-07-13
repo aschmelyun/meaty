@@ -1,47 +1,44 @@
 .alert {
 	width: 100%;
-	border-radius: $alert-border-radius;
 	padding: $alert-padding;
+	border-radius: $alert-border-radius;
+	height: $alert-height;
+	line-height: $alert-height - 2;
 	font-size: $alert-font-size;
 	
 	&.primary {
-		@include alert-style($color-primary-alt, $color-primary);
-		
-			& a {
-				@include alert-link($color-primary-alt);
-			}
+
+		@include alert-style($color-primary, $color-primary-alt, $alert-height);
 	}
 	
 	&.secondary {
-		@include alert-style($color-secondary-alt, $color-secondary);
-		
-			& a {
-				@include alert-link($color-secondary-alt);
-			}
+
+		@include alert-style($color-secondary, $color-secondary-alt, $alert-height);
 	}
 	
 	&.error {
-		@include alert-style($color-error-alt, $color-error);
-		
-			& a {
-				@include alert-link($color-error-alt);
-			}
+
+		@include alert-style($color-error, $color-error-alt, $alert-height);
 	}
 	
 	&.watch {
-		@include alert-style($color-watch-alt, $color-watch);
-		
-			& a {
-				@include alert-link($color-watch-alt);
-			}
+
+		@include alert-style($color-watch, $color-watch-alt, $alert-height);
 	}
 	
 	&.success {
-		@include alert-style($color-success-alt, $color-success);
-		
-			& a {
-				@include alert-link($color-success-alt);
-			}
+
+		@include alert-style($color-success, $color-success-alt, $alert-height);
+	}
+
+	a {
+		text-decoration: underline;
+	}
+
+	.fa {
+		position: absolute;
+		font-size: 1.5em;
+		margin: (($alert-height / 4) + 2) 0 0 ((0 - $alert-height) + 2);
 	}
 	
 }

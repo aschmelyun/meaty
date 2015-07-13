@@ -1,45 +1,23 @@
-// = Responsive breakpoints
+/*
+ * Variables used throughout Cannonfire
+ * organized by categories and
+ * listed alphabetically
+ */
+
+// = Alerts
+$alert-border-radius:           3px;
+$alert-padding:                 0 0 0 16px;
+$alert-font-size:               15px;
+$alert-height:                  52px;
+
+// = Alignment
+$alignment-margin:              8px;
+
+// = Breakpoints
 $break-mobile:                  480px;
 $break-tablet:                  768px;
 $break-desktop-small:           992px;
 $break-desktop-large:           1200px;
-
-// = Main colors used throughout the framework
-$color-primary:                 #48CFAD;
-$color-primary-alt:             #37BC9B;
-
-$color-secondary:               #CCD1D9;
-$color-secondary-alt:           #AAB2BD;
-
-$color-error:                   #ED5565;
-$color-error-alt:               #DA4453;
-
-$color-watch:                   #FFCE54;
-$color-watch-alt:               #FCBB42;
-
-$color-success:                 #A0D468;
-$color-success-alt:             #8CC152;
-
-$white:                         #FFFFFF;
-
-// = Font families and styles
-$font-family:                   "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-size-main:                14px;
-$line-height-main:              20px;
-
-// = Grids and rows
-$row-vertical-spacing:          36px;
-
-// = Alignment ( objects floated right/left )
-$alignment-margin:              8px;
-
-// = Heading typography
-$heading-margin:                4px 0 12px;
-
-// = Alerts
-$alert-border-radius:           3px;
-$alert-padding:                 24px 12px;
-$alert-font-size:               15px;
 
 // = Buttons
 $button-padding:                6px 16px;
@@ -61,6 +39,61 @@ $button-large-font-size:        15px;
 $button-huge-padding:           16px 32px;
 $button-huge-font-size:         17px;
 
+// = Colors
+$white:                         #FFFFFF;
+$black:                         #000000;
+
+$red-light:                     #ED5565;
+$red-dark:                      #DA4453;
+
+$orange-light:                  #FC6E51;
+$orange-dark:                   #E9573F;
+
+$yellow-light:                  #FFCE54;
+$yellow-dark:                   #FCBB42;
+
+$green-light:                   #A0D468;
+$green-dark:                    #8CC152;
+
+$teal-light:                    #48CFAD;
+$teal-dark:                     #37BC9B;
+
+$aqua-light:                    #4FC1E9;
+$aqua-dark:                     #3BAFDA;
+
+$blue-light:                    #5D9CEC;
+$blue-dark:                     #4A89DC;
+
+$purple-light:                  #AC92EC;
+$purple-dark:                   #967ADC;
+
+$pink-light:                    #EC87C0;
+$pink-dark:                     #D770AD;
+
+$light-grey-light:              #F5F7FA;
+$light-grey-dark:               #E6E9ED;
+
+$grey-light:                    #CCD1D9;
+$grey-dark:                     #AAB2BD;
+
+$dark-grey-light:               #656D78;
+$dark-grey-dark:                #434A54;
+
+$color-primary:                 $teal-light;
+$color-primary-alt:             $teal-dark;
+
+$color-secondary:               $grey-light;
+$color-secondary-alt:           $grey-dark;
+
+$color-error:                   $red-light;
+$color-error-alt:               $red-dark;
+
+$color-watch:                   $yellow-light;
+$color-watch-alt:               $yellow-dark;
+
+$color-success:                 $green-light;
+$color-success-alt:             $green-dark;
+
 // = CTAs
 $intro-padding:                 128px 0;
 $intro-text-shadow:             0 1px 1px rgba(0, 0, 0, 0.35);
@@ -69,31 +102,44 @@ $intro-background-repeat:       no-repeat;
 $intro-background-position:     center center;
 $intro-gradient-from:           #ccc;
 $intro-gradient-to:             #999;
-
 $cta-padding:                   1em 0;
+
+// = Font families and sizes
+$font-family:                   "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-size-main:                14px;
 
 // = Forms and inputs
 $input-padding:                 6px 8px;
 $input-margin:                  0 0 8px;
 $input-border-radius:           3px;
-
 $input-submit-padding:          10px 24px;
 $input-submit-font-size:        15px;
 $input-submit-font-weight:      bold;
 $input-submit-border-radius:    3px;
 $input-submit-text-shadow:      0 1px 1px rgba( 0, 0, 0, 0.25 );
-
 $input-label-font-size:         ($font-size-main * 0.75);
 $input-label-font-weight:       700;
 $input-label-text-transform:    uppercase;
 $input-label-color:             darken($color-secondary-alt, 15%);
 
+// = Grids and rows
+$row-vertical-spacing:          36px;
+
+// = Headings
+$heading-margin:                4px 0 12px;
+
+
 // = Images and media
 $thumbnail-background:          $white;
 $thumbnail-padding:             5px;
 $thumbnail-border-radius:       3px;
-
 $thumbnail-bordered-border:     1px solid $color-secondary;
+
+// = Margins
+$default-margin-small:          4px;
+$default-margin-normal:         8px;
+$default-margin-large:          16px;
+$default-margin-huge:           32px;
 
 // = Navigation
 $navigation-padding:            12px 32px 12px 0;
@@ -104,5 +150,16 @@ $navigation-font-color:         $color-secondary-alt;
 $navigation-font-color-hover:   $color-primary;
 $navigation-font-color-active:  $color-primary;
 
+// = Paddings
+$default-padding-small:          4px;
+$default-padding-normal:         8px;
+$default-padding-large:          16px;
+$default-padding-huge:           32px;
+
 // = Tables
 $table-padding:                 12px 16px;
+
+// = Typography
+$default-line-height:           0.75em;
+$line-height-main:              20px;
+$default-text-shadow:           0 1px 1px rgba(0,0,0,0.25);

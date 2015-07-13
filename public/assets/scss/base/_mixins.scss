@@ -1,27 +1,16 @@
 @mixin scale-to( $size ) {
 	
   @if $size == mobile {
-  	
     @media screen and ( min-width: $break-mobile ) { @content; }
-    
   }
-  
   @else if $size == tablet {
-  	
     @media screen and ( min-width: $break-tablet ) { @content; }
-    
   }
-  
   @else if $size == desktop-small {
-  	
     @media screen and ( min-width: $break-desktop-small ) { @content; }
-    
   }
-  
   @else if $size == desktop-large {
-  	
     @media screen and ( min-width: $break-desktop-large ) { @content; }
-    
   }
   
 }
@@ -29,16 +18,12 @@
 @mixin make-columns( $current-column, $total-columns ) {
 	
 	  @if $current-column == $total-columns {
-	  	
 	  	width: percentage( 1 );
-	  	
 	  }
 	  
 	  @else {
-	  	
 	  	$denominator: ( $total-columns / $current-column );
 	  	width: percentage( $current-column / $total-columns ) - ( ( ( $denominator - 1 ) * 4) / $denominator );
-	  	
 	  }
 	  
 }
@@ -62,7 +47,6 @@
 			background-color: transparentize( $border, 0.9 );
 			cursor: pointer;
 		}
-		
 		&:active {
 			background-color: transparentize( $border, 0.75 );
 			cursor: pointer;
@@ -79,7 +63,6 @@
 			border-color: darken( $border, 10% );
 			cursor: pointer;
 		}
-		
 		&:active {
 			background-color: darken( $background, 15% );
 			border-color: darken( $background, 15% );
@@ -98,19 +81,11 @@
 	
 }
 
-@mixin alert-style( $color, $border ) {
-	
-	color: darken( $color, 15% );
-	border: 1px solid $border;
-	border-left-width: 5px;
-	
-}
+@mixin alert-style( $background, $border-color, $border-width ) {
 
-@mixin alert-link( $color ) {
-	
-	color: darken( $color, 15% );
-	font-weight: bold;
-	text-decoration: none;
+	background: $background;
+	color: $white;
+	border-left: $border-width solid $border-color;
 	
 }
 
@@ -124,34 +99,27 @@
 @mixin create-heading( $heading ) {
 	
 	@if $heading == 1 {
-		
 		font-size: 3em;
-		
 	} @else {
-		
 		$font-size: ( 4em / $heading );
 		font-size: $font-size;
-		
 	}
-	
+
 	margin: $heading-margin;
 	line-height: 1em + ( $heading / ( $heading + 6 ) );
 	
 }
 
 @mixin create-cta( $background, $color ) {
-	
 	background: lighten( $background, 10% );
 	
 	& span {
-		
 		color: darken( $color, 15% );
 		font-weight: bold;
 		margin: 0 12px;
 		font-size: 1.333333em;
 		display: inline-block;
 		line-height: 2.15em;
-		
 	}
 	
 }
@@ -159,23 +127,29 @@
 @mixin create-table( $padding, $border-color, $text-align ) {
 	
 	table {
-		
-		width: 100%;
-		
+		width: 100%;	
 	}
-	
 	th, td {
-		
 		padding: $padding;
 		border-bottom: 1px solid $border-color;
-		text-align: $text-align;
-		
+		text-align: $text-align;	
 	}
-	
 	th {
-		
 		font-weight: bold;
-		
 	}
 	
+}
+
+@mixin create-margin( $direction, $size, $margin ) {
+	$margin-title: 'mar-' + str-slice($direction, 1, 1) + '-' + str-slice($size, 1, 1);
+	.#{$margin-title} {
+		margin-#{$direction}: $margin;
+	}
+}
+
+@mixin create-padding( $direction, $size, $padding ) {
+	$padding-title: 'pad-' + str-slice($direction, 1, 1) + '-' + str-slice($size, 1, 1);
+	.#{$padding-title} {
+		padding-#{$direction}: $padding;
+	}
 }

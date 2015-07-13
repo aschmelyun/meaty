@@ -1,0 +1,13 @@
+@each $direction in top, bottom, left, right {
+    @include create-margin($direction, 'small', $default-margin-small);
+    @include create-margin($direction, 'normal', $default-margin-normal);
+    @include create-margin($direction, 'large', $default-margin-large);
+    @include create-margin($direction, 'huge', $default-margin-huge);
+}
+
+@each $direction in top, bottom, left, right {
+    @include create-padding($direction, 'small', $default-padding-small);
+    @include create-padding($direction, 'normal', $default-padding-normal);
+    @include create-padding($direction, 'large', $default-padding-large);
+    @include create-padding($direction, 'huge', $default-padding-huge);
+}
